@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib')
+
+require 'sldn'
+
+if ARGV.length != 1 && ARGV.length != 2
+  puts 'Usage: '
+  puts '  sldn URL'
+  puts '  sldn URL FILE_NAME'
+  exit
+end
+
+url = ARGV[0]
+slide = Sldn::Slide.new(url)
+
+file_name = ARGV.length == 2 ? ARGV[1] : "#{slide.name}.pdf"
+Sldn::Generator.generate(slide, name: file_name)
