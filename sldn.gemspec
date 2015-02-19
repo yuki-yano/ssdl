@@ -5,6 +5,8 @@ require 'sldn/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'sldn'
+  spec.executables   = ['sldn']
+
   spec.version       = Sldn::VERSION
   spec.authors       = ['tigberd']
   spec.email         = ['tigberd@gmail.com']
