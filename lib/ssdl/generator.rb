@@ -1,6 +1,6 @@
 require 'prawn'
 
-module Sldn
+module Ssdl
   class Generator
     def self.generate(slide, name: "#{slide.name}.pdf")
       Prawn::Document.generate(name, page_size: [1024,768], margin:0) do

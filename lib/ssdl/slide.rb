@@ -2,7 +2,7 @@ require 'logger'
 require 'nokogiri'
 require 'open-uri'
 
-module Sldn
+module Ssdl
   class Slide
     attr_reader :name, :page_urls, :count
 
